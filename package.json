@@ -2,6 +2,8 @@
   "name": "vscode-pipe",
 	"displayName": "VS Code Pipe",
 	"description": "Pipe inside VS Code",
+	"author": "Yuvraj Mishra",
+	"publisher": "YuvrajMishra",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.63.0"

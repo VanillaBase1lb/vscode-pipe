@@ -14,8 +14,8 @@ Visual Studio Code extension that pipes your shell command output to a new file.
 
 ## Installation
 
-It is recommended to install the extension from VS Code Extension Marketplace. To do so in VS Code, open command palette (Ctrl+Shift+P by default) and type `TODO`.
+It is recommended to install the extension from VS Code Extension Marketplace. To do so in VS Code, open command palette (Ctrl+Shift+P by default) and type `ext install vscode-pipe`.
 
-* [Extension Marketplace](https://code.visualstudio.com/api/references/extension-guidelines)
+* [View on Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=YuvrajMishra.vscode-pipe)
 
 Open up a new issue if something doesn't work, or just give your general feedback.
