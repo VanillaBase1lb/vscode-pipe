@@ -1,66 +1,21 @@
-# vscode-pipe README
+# VS Code Pipe
 
 Visual Studio Code extension that pipes your shell command output to a new file.
 
-## Features
+## Demo
 
-\!\[feature X\]\(images/feature-x.png\)
+![demo](https://j.gifs.com/OgLLrr.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> Note: If the command produces no output, the created file will be empty.
 
 ## Requirements
 
-NodeJS
+* NodeJS
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+It is recommended to install the extension from VS Code Extension Marketplace. To do so in VS Code, open command palette (Ctrl+Shift+P by default) and type `TODO`.
 
-For example:
+* [Extension Marketplace](https://code.visualstudio.com/api/references/extension-guidelines)
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Open up a new issue if something doesn't work, or just give your general feedback.
