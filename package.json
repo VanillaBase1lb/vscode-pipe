@@ -1,7 +1,7 @@
 {
   "name": "vscode-pipe",
-	"displayName": "VSCode Pipe",
-	"description": "Pipe, but inside VSCode",
+	"displayName": "VS Code Pipe",
+	"description": "Pipe inside VS Code",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.63.0"
@@ -9,6 +9,11 @@
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/vanillabase1lb/vscode-pipe.git"
+	},
+	  
 	"activationEvents": [
         "onCommand:vscode-pipe.pipe"
 	],
@@ -17,7 +22,7 @@
 		"commands": [
 			{
 				"command": "vscode-pipe.pipe",
-				"title": "VSCode Pipe: Pipe"
+				"title": "VS Code Pipe: Pipe"
 			}
 		]
 	},
