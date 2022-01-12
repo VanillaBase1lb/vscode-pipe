@@ -1,52 +1,51 @@
 {
   "name": "vscode-pipe",
-	"displayName": "VS Code Pipe",
-	"description": "Pipe inside VS Code",
-	"author": "Yuvraj Mishra",
-	"publisher": "YuvrajMishra",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.63.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/vanillabase1lb/vscode-pipe.git"
-	},
-	  
-	"activationEvents": [
-        "onCommand:vscode-pipe.pipe"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "vscode-pipe.pipe",
-				"title": "VS Code Pipe: Pipe"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.63.0",
-		"@types/glob": "^7.1.4",
-		"@types/mocha": "^9.0.0",
-		"@types/node": "14.x",
-		"@typescript-eslint/eslint-plugin": "^5.1.0",
-		"@typescript-eslint/parser": "^5.1.0",
-		"eslint": "^8.1.0",
-		"glob": "^7.1.7",
-		"mocha": "^9.1.3",
-		"typescript": "^4.4.4",
-		"@vscode/test-electron": "^1.6.2"
-	}
+  "displayName": "VS Code Pipe",
+  "description": "Pipe inside VS Code",
+  "author": "Yuvraj Mishra",
+  "publisher": "YuvrajMishra",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vanillabase1lb/vscode-pipe.git"
+  },
+  "activationEvents": [
+    "onCommand:vscode-pipe.pipe"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-pipe.pipe",
+        "title": "VS Code Pipe: Pipe"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.63.0",
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4",
+    "@vscode/test-electron": "^1.6.2"
+  }
 }
