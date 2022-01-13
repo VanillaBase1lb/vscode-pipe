@@ -32,12 +32,12 @@
         "vscode-pipe.outputFileName": {
           "type": "string",
           "default": "pipe.output",
-          "description": "Specifies the name of file, where the output from command is piped to."
+          "description": "Specifies the name of file, where the output from command is piped to. This file will be created wherever the current file is open."
         },
         "vscode-pipe.shellRelativePwd": {
           "type": "string",
           "default": "",
-          "description": "Specifies the directory, where the shell command will be executed."
+          "markdownDescription": "Specifies the directory, where the shell command will be executed. By default, shell process will start from the `fileDirPath`, i.e. the directory in which current file is opened. When using this setting, remember that this path is relative to `fileDirPath` and must start with a `/`. For example, `/..` or `/../` will start the shell from current file's parent directory. Try using `ls` or `pwd` commands with different paths to get a feel for it."
         }
       }
     }
