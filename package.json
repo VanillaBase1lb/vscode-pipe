@@ -4,7 +4,7 @@
   "description": "Pipe inside VS Code",
   "author": "Yuvraj Mishra",
   "publisher": "YuvrajMishra",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.63.0"
   },
