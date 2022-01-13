@@ -34,10 +34,10 @@
           "default": "pipe.output",
           "description": "Specifies the name of file, where the output from command is piped to."
         },
-        "vscode-pipe.outputDir": {
+        "vscode-pipe.shellRelativePwd": {
           "type": "string",
-          "default": "${fileDirname}",
-          "description": "Specifies the directory, where the output file will be created."
+          "default": "",
+          "description": "Specifies the directory, where the shell command will be executed."
         }
       }
     }
