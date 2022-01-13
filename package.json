@@ -25,7 +25,22 @@
         "command": "vscode-pipe.pipe",
         "title": "VS Code Pipe: Pipe"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "VS Code Pipe",
+      "properties": {
+        "vscode-pipe.outputFileName": {
+          "type": "string",
+          "default": "pipe.output",
+          "description": "Specifies the name of file, where the output from command is piped to."
+        },
+        "vscode-pipe.outputDir": {
+          "type": "string",
+          "default": "${fileDirname}",
+          "description": "Specifies the directory, where the output file will be created."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

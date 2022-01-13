@@ -1,25 +1,37 @@
 import * as vscode from "vscode";
+import * as path from "path";
+import * as fs from "fs";
+import { insertTextInFile } from "./inserttext";
 
 
-export async function createFileOpen(outputpipe: string) {
-  const we = new vscode.WorkspaceEdit();
+const outputFileName: string = vscode.workspace.getConfiguration().get("vscode-pipe.outputFileName")!;
 
-  // @ts-ignore
-  const thisWorkspace = vscode.workspace.workspaceFolders[0].uri.toString();
+export async function createFileOpen(commandOutput: string) {
+  let outputFilePath: string;
 
-  if (thisWorkspace === undefined) {
-    vscode.window.showInformationMessage("You need to be inside a workspace!");
+  // if no editor is open, the file is created in root workspace directory
+  if (!vscode.window.activeTextEditor) {
+    // if workspace exists
+    if (vscode.workspace.workspaceFolders) {
+      const workspacePath = vscode.workspace.workspaceFolders[0].uri.path;
+      outputFilePath = workspacePath + outputFileName;
+    } else {
+      vscode.window.showErrorMessage("No file or workspace open");
+      return new Error("No file or workspace open");
+    }
   }
-
-  const newUri = vscode.Uri.parse(`${thisWorkspace}/pipe.output`);
-
-  we.createFile(newUri, { ignoreIfExists: false, overwrite: true });
-
-  await vscode.workspace.applyEdit(we);
-
-  await vscode.workspace.openTextDocument(newUri).then(async (document) => {
+  // a editor file is currently open
+  else {
+    // if editor has no path, TODO
+    const fileDirPath = path.dirname(
+      vscode.window.activeTextEditor.document.uri.path
+    );
+    outputFilePath = path.join(fileDirPath, outputFileName);
+  }
+  fs.writeFileSync(outputFilePath, "");
+  // it is impossible to error handle this openTextDocument function, tried everything
+  vscode.workspace.openTextDocument(outputFilePath).then(async (document) => {
     await vscode.window.showTextDocument(document);
-    const snippetpipe = new vscode.SnippetString(outputpipe);
-    vscode.window.activeTextEditor?.insertSnippet(snippetpipe);
+    insertTextInFile(commandOutput);
   });
 }
