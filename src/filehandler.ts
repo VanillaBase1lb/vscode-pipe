@@ -5,17 +5,19 @@ import { insertTextInFile } from "./inserttext";
 
 
 export async function createFileOpen(commandOutput: string) {
+  if (
+    vscode.workspace.getConfiguration().get("vscode-pipe.createNewFile") ===
+    false
+  ) {
+    insertTextInFile(commandOutput);
+    return;
+  }
   const outputFileName: string = vscode.workspace
     .getConfiguration()
     .get("vscode-pipe.outputFileName")!;
 
-  // if no editor is open, the file is created in root workspace directory
-  if (!vscode.window.activeTextEditor) {
-    vscode.window.showErrorMessage("No file open");
-    return new Error("No file open");
-  }
   const fileDirPath = path.dirname(
-    vscode.window.activeTextEditor.document.uri.path
+    vscode.window.activeTextEditor!.document.uri.path
   );
 
   const outputFilePath = path.join(fileDirPath, outputFileName);

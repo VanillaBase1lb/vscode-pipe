@@ -27,12 +27,17 @@
       }
     ],
     "configuration": {
-      "title": "VS Code Pipe",
+      "title": "Pipe",
       "properties": {
+        "vscode-pipe.createNewFile": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "If true, will create a new file with the name specified in `vscode-pipe.outputFileName`. Otherwise will pipe the output to wherever the cursor is on currently open file."
+        },
         "vscode-pipe.outputFileName": {
           "type": "string",
           "default": "pipe.output",
-          "description": "Specifies the name of file, where the output from command is piped to. This file will be created wherever the current file is open."
+          "markdownDescription": "Not applicable if `vscode-pipe.createNewFile` is disabled. Specifies the name of file, where the output from command is piped to. This file will be created in the same directory as currently open file."
         },
         "vscode-pipe.shellRelativePwd": {
           "type": "string",
