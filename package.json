@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/vanillabase1lb/vscode-pipe.git"
+    "url": "https://github.com/vanillabase1lb/vscode-pipe.git"
   },
   "activationEvents": [
     "onCommand:vscode-pipe.pipe"
